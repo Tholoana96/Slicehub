@@ -1,5 +1,3 @@
-// src/pages/OrderTrackingPage.js
-
 import React, { useState } from "react";
 
 const OrderTrackingPage = () => {
