@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Cart from "../components/Cart";
 
-const CartPage = ({ cartItems = [], setCartItems }) => {
+const CartPage = ({ cartItems, setCartItems }) => {
+  const navigate = useNavigate();
+
   const removeFromCart = (id) => {
     const filteredItems = cartItems.filter((item) => item.id !== id);
     setCartItems(filteredItems);
@@ -14,6 +17,10 @@ const CartPage = ({ cartItems = [], setCartItems }) => {
     );
   };
 
+  const handleProceedToCheckout = () => {
+    navigate("/checkout");
+  };
+
   return (
     <div>
       <h1>Your Cart</h1>
@@ -22,6 +29,8 @@ const CartPage = ({ cartItems = [], setCartItems }) => {
         onRemoveItem={removeFromCart}
         onUpdateQuantity={updateQuantity}
       />
+      <button onClick={handleProceedToCheckout}>Proceed to Checkout</button>
+      <br />
       <a href="/menu">Back to Menu</a>
     </div>
   );
