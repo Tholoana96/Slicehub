@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/PizzaStyles.css";
 
 const PizzaList = ({ pizzas, onSelectPizza }) => {
   return (
@@ -7,13 +8,10 @@ const PizzaList = ({ pizzas, onSelectPizza }) => {
       <ul>
         {pizzas.map((pizza) => (
           <li key={pizza.id}>
-            <img
-              src={`https://via.placeholder.com/150?text=${pizza.name}`}
-              alt={pizza.name}
-            />
             <h3>{pizza.name}</h3>
+            <img src={pizza.image} alt={pizza.name} />
             <p>{pizza.description}</p>
-            <p>R{pizza.price}</p>
+            <p>${pizza.price.toFixed(2)}</p>
             <button onClick={() => onSelectPizza(pizza)}>Add to Cart</button>
           </li>
         ))}
