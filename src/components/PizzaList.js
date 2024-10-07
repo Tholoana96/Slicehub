@@ -5,17 +5,23 @@ const PizzaList = ({ pizzas, onSelectPizza }) => {
   return (
     <div>
       <h2>Available Pizzas</h2>
-      <ul>
+      <div className="pizza-list">
         {pizzas.map((pizza) => (
-          <li key={pizza.id}>
+          <div key={pizza.id} className="pizza-item">
             <h3>{pizza.name}</h3>
+            <br />
             <img src={pizza.image} alt={pizza.name} />
             <p>{pizza.description}</p>
-            <p>${pizza.price.toFixed(2)}</p>
-            <button onClick={() => onSelectPizza(pizza)}>Add to Cart</button>
-          </li>
+            <br />
+            <div className="pizza-footer">
+              <p>${pizza.price.toFixed(2)}</p>
+              <br />
+              <br />
+              <button onClick={() => onSelectPizza(pizza)}>Add to Cart</button>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

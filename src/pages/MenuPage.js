@@ -37,6 +37,8 @@ const MenuPage = ({ cartItems, setCartItems }) => {
     <div>
       <h1>Our Menu</h1>
       <PizzaList pizzas={pizzas} onSelectPizza={addToCart} />
+      <br />
+      <br />
       <button onClick={goToCart}>Go to Cart</button>
     </div>
   );
