@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { fetchPizzas } from "../api/mockApi";
 import PizzaList from "../components/PizzaList";
+import { useNavigate } from "react-router-dom";
 
 const MenuPage = ({ cartItems, setCartItems }) => {
   const [pizzas, setPizzas] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getPizzas = async () => {
@@ -27,11 +29,15 @@ const MenuPage = ({ cartItems, setCartItems }) => {
     console.log("Cart Updated:", cartItems);
   };
 
+  const goToCart = () => {
+    navigate("/cart");
+  };
+
   return (
     <div>
       <h1>Our Menu</h1>
       <PizzaList pizzas={pizzas} onSelectPizza={addToCart} />
-      <a href="/cart">Go to Cart</a>
+      <button onClick={goToCart}>Go to Cart</button>
     </div>
   );
 };
