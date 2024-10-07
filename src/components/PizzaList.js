@@ -13,7 +13,7 @@ const PizzaList = ({ pizzas, onSelectPizza }) => {
             />
             <h3>{pizza.name}</h3>
             <p>{pizza.description}</p>
-            <p>${pizza.price}</p>
+            <p>R{pizza.price}</p>
             <button onClick={() => onSelectPizza(pizza)}>Add to Cart</button>
           </li>
         ))}
