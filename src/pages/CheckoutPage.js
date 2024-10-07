@@ -1,56 +1,51 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CheckoutPage = () => {
-  const [customerDetails, setCustomerDetails] = useState({
-    name: "",
-    address: "",
-    email: "",
-  });
+  const [name, setName] = useState("");
+  const [address, setAddress] = useState("");
+  const [email, setEmail] = useState("");
 
-  const handleChange = (e) => {
-    setCustomerDetails({
-      ...customerDetails,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleCheckout = (e) => {
     e.preventDefault();
-    console.log("Order Confirmed:", customerDetails);
+    alert(`Order placed successfully for ${name}!`);
+    navigate("/order-tracking");
   };
 
   return (
     <div>
       <h1>Checkout</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleCheckout}>
         <div>
           <label>Name:</label>
           <input
             type="text"
-            name="name"
-            value={customerDetails.name}
-            onChange={handleChange}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
           />
         </div>
         <div>
           <label>Address:</label>
           <input
             type="text"
-            name="address"
-            value={customerDetails.address}
-            onChange={handleChange}
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            required
           />
         </div>
         <div>
           <label>Email:</label>
           <input
             type="email"
-            name="email"
-            value={customerDetails.email}
-            onChange={handleChange}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </div>
-        <button type="submit">Confirm Order</button>
+        <button type="submit">Place Order</button>
       </form>
     </div>
   );
