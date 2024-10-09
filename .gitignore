@@ -24,8 +24,8 @@ yarn-error.log*
 
 # Ignore specific files
 /public
-/App.test.js
-/index.css
+./src/App.test.js
+./src/index.css
 /App.css
 /index.js
 /logo.svg
