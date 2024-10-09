@@ -15,8 +15,6 @@ const PizzaList = ({ pizzas, onSelectPizza }) => {
             <br />
             <div className="pizza-footer">
               <p>${pizza.price.toFixed(2)}</p>
-              <br />
-              <br />
               <button onClick={() => onSelectPizza(pizza)}>Add to Cart</button>
             </div>
           </div>
