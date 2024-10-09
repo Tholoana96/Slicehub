@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Cart from "../components/Cart";
+import "../styles/CartStyles.css";
 
 const CartPage = ({ cartItems, setCartItems }) => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const CartPage = ({ cartItems, setCartItems }) => {
   };
 
   return (
-    <div>
+    <div className="cart-container">
       <h1>Your Cart</h1>
       <Cart
         cartItems={cartItems}

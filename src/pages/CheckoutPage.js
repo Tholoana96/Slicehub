@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/CheckoutStyles.css";
 
 const CheckoutPage = () => {
   const [name, setName] = useState("");
@@ -15,7 +16,7 @@ const CheckoutPage = () => {
   };
 
   return (
-    <div>
+    <div className="checkout">
       <h1>Checkout</h1>
       <form onSubmit={handleCheckout}>
         <div>

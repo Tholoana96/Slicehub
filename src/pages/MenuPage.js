@@ -42,6 +42,7 @@ const MenuPage = ({ cartItems, setCartItems }) => {
       <br />
       <button onClick={goToCart}>Go to Cart</button>
       <BackToTopButton />
+      <br />
     </div>
   );
 };

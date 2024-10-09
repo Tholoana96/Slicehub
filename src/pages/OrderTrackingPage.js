@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../styles/OrderTrackingStyles.css";
 
 const OrderTrackingPage = () => {
   const [orderStatus, setOrderStatus] = useState("Preparing");
@@ -24,7 +25,7 @@ const OrderTrackingPage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="tracking">
       <h1>Order Tracking</h1>
       <p>Current Status: {orderStatus}</p>
     </div>
