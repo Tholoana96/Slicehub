@@ -72,11 +72,8 @@ const HomePage = () => {
         <h2>Current Promotions</h2>
         <p>Order any two pizzas and get 20% off of your next order.</p>
       </section>
-      <footer className="footer">
-        <button className="order-button">Order Now</button>
-      </footer>
-      <br />
-      <br />
+      <button className="order-button">Order Now</button>
+
       <BackToTopButton />
     </div>
   );
