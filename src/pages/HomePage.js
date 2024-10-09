@@ -18,6 +18,7 @@ const HomePage = () => {
         <p className="tagline">
           Your favorite pizzas delivered fresh to your door!
         </p>
+        <br />
         <button className="order-button">Order Now</button>
       </header>
       <section className="features">
