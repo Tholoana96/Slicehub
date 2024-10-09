@@ -1,9 +1,13 @@
 import React from "react";
 import "../styles/NavbarStyles.css";
+import logowhite from "../images/logo/SliceHubWhite.png";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
+      <div className="logo-container">
+        <img src={logowhite} alt="Logo" className="logo-nav" />
+      </div>
       <ul>
         <li>
           <a href="/">Home</a>
