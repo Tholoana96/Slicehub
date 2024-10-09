@@ -14,11 +14,11 @@ footer {
 a {
   text-decoration: none;
   color: #fff;
-  transition: color 0.3s; /* Smooth color transition for links */
+  transition: color 0.3s;
 }
 
 a:hover {
-  color: #e3e1e8; /* Change color on hover */
+  color: #e3e1e8;
 }
 
 .social-icons {
@@ -26,16 +26,16 @@ a:hover {
 }
 
 .social-icons i {
-  margin: 0 10px; /* Space out icons */
-  font-size: 24px; /* Set the size of icons */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  transition: color 0.3s; /* Smooth color transition */
+  margin: 0 10px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
 .social-icons i:hover {
-  color: #e3e1e8; /* Change icon color on hover */
+  color: #e3e1e8;
 }
 
 .additional-info {
-  margin-top: 15px; /* Add some space above additional info */
+  margin-top: 15px;
 }
