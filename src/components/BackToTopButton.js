@@ -32,7 +32,7 @@ const BackToTopButton = () => {
       {visible && (
         <button onClick={scrollToTop} className="backToTopButton">
           {" "}
-          Jump to top
+          Back to Top
         </button>
       )}
     </div>
