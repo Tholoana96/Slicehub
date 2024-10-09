@@ -78,7 +78,7 @@ const pizzas = [
   },
   {
     id: 12,
-    name: "Caramelized Onion, Goat Cheese and Prosciutto",
+    name: "Goat Cheese and Onion",
     description: "Sweet onions with goat cheese and prosciutto",
     price: 68,
     image: require("../images/pizzas/caramelized_onion_goat_cheese.jpg"),
