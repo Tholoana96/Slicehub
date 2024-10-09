@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { fetchPizzas } from "../api/mockApi";
 import PizzaList from "../components/PizzaList";
 import { useNavigate } from "react-router-dom";
+import BackToTopButton from "../components/BackToTopButton";
 
 const MenuPage = ({ cartItems, setCartItems }) => {
   const [pizzas, setPizzas] = useState([]);
@@ -40,6 +41,7 @@ const MenuPage = ({ cartItems, setCartItems }) => {
       <br />
       <br />
       <button onClick={goToCart}>Go to Cart</button>
+      <BackToTopButton />
     </div>
   );
 };

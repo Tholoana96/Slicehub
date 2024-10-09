@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../styles/HomeStyles.css";
 import logo from "../images/logo/SliceHub.png";
 import pizzaImage1 from "../images/pizzas/margherita.jpg";
 import pizzaImage2 from "../images/pizzas/pepperoni.jpg";
 import pizzaImage3 from "../images/pizzas/bbq_chicken.jpg";
 import pizzaImage4 from "../images/pizzas/vegan.jpg";
+import BackToTopButton from "../components/BackToTopButton";
 
 const HomePage = () => {
   return (
@@ -18,9 +18,7 @@ const HomePage = () => {
         <p className="tagline">
           Your favorite pizzas delivered fresh to your door!
         </p>
-        <Link to="/menu">
-          <button className="order-button">Order Now</button>
-        </Link>
+        <button className="order-button">Order Now</button>
       </header>
       <section className="features">
         <h2>Why Choose SliceHub?</h2>
@@ -50,7 +48,7 @@ const HomePage = () => {
           <div className="pizza-item">
             <img src={pizzaImage4} alt="Vegan Pizza" />
             <h3>Vegan Pizza</h3>
-            <p>Assorted vegetables with our special vegan cheese.</p>
+            <p>Delicious roasted vegetables with our special vegan cheese.</p>
           </div>
         </div>
       </section>
@@ -71,13 +69,14 @@ const HomePage = () => {
       </section>
       <section className="promotions">
         <h2>Current Promotions</h2>
-        <p>Order any two pizzas and get your next delivery FREE on us!</p>
+        <p>Order any two pizzas and get 20% off of your next order.</p>
       </section>
       <footer className="footer">
-        <Link to="/menu">
-          <button className="order-button">Order Now</button>
-        </Link>
+        <button className="order-button">Order Now</button>
       </footer>
+      <br />
+      <br />
+      <BackToTopButton />
     </div>
   );
 };
