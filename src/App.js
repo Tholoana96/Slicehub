@@ -6,6 +6,7 @@ import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import OrderTrackingPage from "./pages/OrderTrackingPage";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -31,6 +32,7 @@ function App() {
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/order-tracking" element={<OrderTrackingPage />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
