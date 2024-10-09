@@ -21,3 +21,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Ignore specific files
+/public
+/App.test.js
+/index.css
+/App.css
+/index.js
+/logo.svg
+/reportWebVitals.js
+/setupTests.js
