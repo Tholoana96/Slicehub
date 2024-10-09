@@ -18,22 +18,13 @@ const CheckoutPage = () => {
   return (
     <div className="checkout">
       <h1>Checkout</h1>
-      <form onSubmit={handleCheckout}>
+      <form onSubmit={handleCheckout} className="CheckoutForm">
         <div>
           <label>Name:</label>
           <input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label>Address:</label>
-          <input
-            type="text"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
             required
           />
         </div>
@@ -46,6 +37,17 @@ const CheckoutPage = () => {
             required
           />
         </div>
+        <div>
+          <label>Address:</label>
+          <input
+            type="text"
+            className="address"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            required
+          />
+        </div>
+
         <button type="submit">Place Order</button>
       </form>
     </div>

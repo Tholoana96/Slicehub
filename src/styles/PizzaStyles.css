@@ -66,3 +66,18 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.pizza-item button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #721b27; /* Your button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pizza-item button:hover {
+  background-color: #686868; /* Hover color */
+}

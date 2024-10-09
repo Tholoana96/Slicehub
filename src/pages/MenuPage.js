@@ -39,8 +39,8 @@ const MenuPage = ({ cartItems, setCartItems }) => {
       <h1>Our Menu</h1>
       <PizzaList pizzas={pizzas} onSelectPizza={addToCart} />
       <br />
-      <br />
-      <button onClick={goToCart}>Go to Cart</button>
+      <button onClick={goToCart}>Go to Cart</button>{" "}
+      {/* Button to navigate to the cart */}
       <BackToTopButton />
       <br />
     </div>
