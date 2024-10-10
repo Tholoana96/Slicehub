@@ -8,7 +8,6 @@ const Cart = ({ cartItems = [], onRemoveItem, onUpdateQuantity }) => {
 
   return (
     <div>
-      <h2>Your Cart</h2>
       {cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
