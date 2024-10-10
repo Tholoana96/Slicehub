@@ -32,6 +32,8 @@ const CartPage = ({ cartItems, setCartItems }) => {
       />
       <button onClick={handleProceedToCheckout}>Proceed to Checkout</button>
       <br />
+      <br />
+      <br />
       <a href="/menu">Back to Menu</a>
     </div>
   );
