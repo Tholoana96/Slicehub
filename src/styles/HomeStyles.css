@@ -140,3 +140,17 @@ blockquote {
 .order-button.footer {
   padding-bottom: 40px;
 }
+
+.bottom-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.bottom-image img {
+  width: 190px;
+  max-width: 100%;
+  height: auto;
+}
