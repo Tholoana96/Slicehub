@@ -2,6 +2,10 @@
 
 **SliceHub** is a modern and responsive pizza ordering web application designed to provide users with a seamless and enjoyable experience when choosing and ordering their favorite pizzas online.
 
+## Author
+
+- [Tholoana Manyane](https://github.com/Tholoana96)
+
 ## Project Overview
 
 SliceHub is currently in development, and the project is structured to include core components like the navigation bar, menu pages, cart functionality, and checkout flow. We aim to create a sleek, user-friendly interface with a focus on fast and efficient navigation.
@@ -62,3 +66,13 @@ SliceHub is currently in development, and the project is structured to include c
 ## Contribution
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue for any feature requests or bug reports.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Screenshots
+
+## Live Demo
+
+Check out the live version of SliceHub [here]
