@@ -10,6 +10,10 @@
 
 SliceHub is currently in development, and the project is structured to include core components like the navigation bar, menu pages, cart functionality, and checkout flow. We aim to create a sleek, user-friendly interface with a focus on fast and efficient navigation.
 
+## Live Demo
+
+Check out the live version of SliceHub [https://slicehub-tholoana.netlify.app/]
+
 ## Features
 
 - 🍕 **Responsive Design**: Adaptable layouts for both mobile and desktop devices.
@@ -78,7 +82,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ![Cart Page](src/images/screenshots/cart.png)
 ![Checkout Page](src/images/screenshots/checkout.png)
 ![Order Tracking Page](src/images/screenshots/tracking.png)
-
-## Live Demo
-
-Check out the live version of SliceHub [here]
