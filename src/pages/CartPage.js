@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Cart from "../components/Cart";
 import "../styles/CartStyles.css";
 
@@ -34,7 +34,7 @@ const CartPage = ({ cartItems, setCartItems }) => {
       <br />
       <br />
       <br />
-      <a href="/menu">Back to Menu</a>
+      <Link to="/menu">Back to Menu</Link>
     </div>
   );
 };

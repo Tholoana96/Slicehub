@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/HomeStyles.css";
 import logo from "../images/logo/SliceHub.png";
 import playImage from "../images/play-store.png";
@@ -20,9 +21,9 @@ const HomePage = () => {
           Your favorite pizzas delivered fresh to your door!
         </p>
         <br />
-        <a href="/menu">
+        <Link to="/menu">
           <button className="order-button">Order Now</button>
-        </a>
+        </Link>
       </header>
       <section className="features">
         <h2>Why Choose SliceHub?</h2>
@@ -75,13 +76,13 @@ const HomePage = () => {
         <h2>Current Promotions</h2>
         <p>Order any two pizzas and get 20% off of your next order.</p>
       </section>
-      <a href="/menu">
+      <Link to="/menu">
         <button className="order-button">Order Now</button>
-      </a>
+      </Link>
       <br />
       <br />
       <br />
-      <p>Get our app on your mobile toady!</p>
+      <p>Get our app on your mobile today!</p>
       <div className="bottom-image">
         <br />
         <img src={playImage} alt="Back to Top" />
