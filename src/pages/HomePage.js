@@ -19,7 +19,9 @@ const HomePage = () => {
           Your favorite pizzas delivered fresh to your door!
         </p>
         <br />
-        <button className="order-button">Order Now</button>
+        <a href="/menu">
+          <button className="order-button">Order Now</button>
+        </a>
       </header>
       <section className="features">
         <h2>Why Choose SliceHub?</h2>
@@ -72,8 +74,9 @@ const HomePage = () => {
         <h2>Current Promotions</h2>
         <p>Order any two pizzas and get 20% off of your next order.</p>
       </section>
-      <button className="order-button">Order Now</button>
-
+      <a href="/menu">
+        <button className="order-button">Order Now</button>
+      </a>
       <BackToTopButton />
     </div>
   );

@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/NavbarStyles.css";
 import logowhite from "../images/logo/SliceHubWhite.png";
 
-const Navbar = () => {
+const Navbar = ({ cartItemsCount }) => {
   return (
     <nav className="navbar">
       <div className="logo-container">
@@ -10,16 +11,16 @@ const Navbar = () => {
       </div>
       <ul>
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/menu">Menu</a>
+          <Link to="/menu">Menu</Link>
         </li>
         <li>
-          <a href="/cart">Cart</a>
+          <Link to="/cart">Cart ({cartItemsCount})</Link>
         </li>
         <li>
-          <a href="/order-tracking">Order Tracking</a>
+          <Link to="/order-tracking">Order Tracking</Link>
         </li>
       </ul>
     </nav>
