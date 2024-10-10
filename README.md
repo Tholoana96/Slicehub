@@ -73,6 +73,12 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Screenshots
 
+![Homepage](src/images/screenshots/homepage.png)
+![Menu Page](src/images/screenshots/menu.png)
+![Cart Page](src/images/screenshots/cart.png)
+![Checkout Page](src/images/screenshots/checkout.png)
+![Order Tracking Page](src/images/screenshots/tracking.png)
+
 ## Live Demo
 
 Check out the live version of SliceHub [here]
