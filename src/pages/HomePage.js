@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/HomeStyles.css";
 import logo from "../images/logo/SliceHub.png";
+import playImage from "../images/play-store.png";
 import pizzaImage1 from "../images/pizzas/margherita.jpg";
 import pizzaImage2 from "../images/pizzas/pepperoni.jpg";
 import pizzaImage3 from "../images/pizzas/bbq_chicken.jpg";
@@ -77,6 +78,14 @@ const HomePage = () => {
       <a href="/menu">
         <button className="order-button">Order Now</button>
       </a>
+      <br />
+      <br />
+      <br />
+      <p>Get our app on your mobile toady!</p>
+      <div className="bottom-image">
+        <br />
+        <img src={playImage} alt="Back to Top" />
+      </div>
       <BackToTopButton />
     </div>
   );
