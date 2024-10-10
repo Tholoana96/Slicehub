@@ -8,7 +8,7 @@
 
 ## Project Overview
 
-SliceHub is currently in development, and the project is structured to include core components like the navigation bar, menu pages, cart functionality, and checkout flow. We aim to create a sleek, user-friendly interface with a focus on fast and efficient navigation.
+SliceHub is a modern and responsive web application designed for pizza lovers to order their favorite pizzas online seamlessly. With a user-friendly interface, SliceHub provides an enjoyable ordering experience, allowing customers to browse a diverse menu, customize their orders, and track the status of their deliveries
 
 ## Live Demo
 
