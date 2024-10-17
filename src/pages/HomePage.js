@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/HomeStyles.css";
 import logo from "../images/logo/SliceHub.png";
@@ -10,6 +10,41 @@ import pizzaImage4 from "../images/pizzas/vegan.jpg";
 import BackToTopButton from "../components/BackToTopButton";
 
 const HomePage = () => {
+  const pizzas = [
+    {
+      name: "Margherita Pizza",
+      img: pizzaImage1,
+      desc: "Classic delight with fresh tomatoes and mozzarella cheese.",
+    },
+    {
+      name: "Pepperoni Pizza",
+      img: pizzaImage2,
+      desc: "Spicy pepperoni on a bed of gooey cheese.",
+    },
+    {
+      name: "BBQ Chicken Pizza",
+      img: pizzaImage3,
+      desc: "Smoky BBQ sauce with tender chicken and onions.",
+    },
+    {
+      name: "Vegan Pizza",
+      img: pizzaImage4,
+      desc: "Delicious roasted vegetables with our special vegan cheese.",
+    },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % pizzas.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + pizzas.length) % pizzas.length
+    );
+  };
+
   return (
     <div className="homepage">
       <header className="homepage-header">
@@ -25,38 +60,27 @@ const HomePage = () => {
           <button className="order-button">Order Now</button>
         </Link>
       </header>
-      <section className="features">
-        <h2>Why Choose SliceHub?</h2>
-        <p>
-          Experience the best pizzas in town. Order now and enjoy fresh,
-          delicious flavors delivered to your doorstep!
-        </p>
-      </section>
+
       <section className="featured-pizzas">
         <h2>Featured Pizzas</h2>
-        <div className="pizza-list">
-          <div className="pizza-item">
-            <img src={pizzaImage1} alt="Margherita Pizza" />
-            <h3>Margherita Pizza</h3>
-            <p>Classic delight with fresh tomatoes and mozzarella cheese.</p>
+        <div className="slider">
+          <button className="prev" onClick={prevSlide}>
+            ❮
+          </button>
+          <div className="pizza-slide">
+            <img
+              src={pizzas[currentIndex].img}
+              alt={pizzas[currentIndex].name}
+            />
+            <h3>{pizzas[currentIndex].name}</h3>
+            <p>{pizzas[currentIndex].desc}</p>
           </div>
-          <div className="pizza-item">
-            <img src={pizzaImage2} alt="Pepperoni Pizza" />
-            <h3>Pepperoni Pizza</h3>
-            <p>Spicy pepperoni on a bed of gooey cheese.</p>
-          </div>
-          <div className="pizza-item">
-            <img src={pizzaImage3} alt="BBQ Chicken Pizza" />
-            <h3>BBQ Chicken Pizza</h3>
-            <p>Smoky BBQ sauce with tender chicken and onions.</p>
-          </div>
-          <div className="pizza-item">
-            <img src={pizzaImage4} alt="Vegan Pizza" />
-            <h3>Vegan Pizza</h3>
-            <p>Delicious roasted vegetables with our special vegan cheese.</p>
-          </div>
+          <button className="next" onClick={nextSlide}>
+            ❯
+          </button>
         </div>
       </section>
+
       <section className="testimonials">
         <h2>What Our Customers Say</h2>
         <blockquote>
@@ -66,16 +90,7 @@ const HomePage = () => {
           "Fast service and delicious flavors. My favorite pizza place!" - Jamie
         </blockquote>
       </section>
-      <section className="how-it-works">
-        <h2>How It Works</h2>
-        <p>Choose your favorite pizza from our menu.</p>
-        <p>Add it to your cart and proceed to checkout.</p>
-        <p>Enter your delivery details and enjoy your pizza!</p>
-      </section>
-      <section className="promotions">
-        <h2>Current Promotions</h2>
-        <p>Order any two pizzas and get 20% off of your next order.</p>
-      </section>
+
       <Link to="/menu">
         <button className="order-button">Order Now</button>
       </Link>
@@ -87,6 +102,7 @@ const HomePage = () => {
         <br />
         <img src={playImage} alt="Back to Top" />
       </div>
+
       <BackToTopButton />
     </div>
   );
