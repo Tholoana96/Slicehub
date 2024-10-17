@@ -2,16 +2,26 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  padding: 10px;
-  border-radius: 25px;
-  background-color: #b50006;
-  color: #fff;
+  padding: 0px;
+  border-radius: 50%;
+  background-color: rgba(181, 0, 6, 0.8);
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   z-index: 1000;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backToTopButton svg {
+  width: 26px;
+  height: 26px;
 }
 
 .backToTopButton:hover {
-  background-color: #686868;
+  background-color: rgba(104, 104, 104, 0.8);
+  transform: scale(1.1);
 }

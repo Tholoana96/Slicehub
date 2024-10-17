@@ -5,38 +5,3 @@ footer {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.contact-info p,
-.additional-info p {
-  margin: 5px 0;
-  text-align: left;
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: #e3e1e8;
-}
-
-.social-icons {
-  margin-top: 10px;
-}
-
-.social-icons i {
-  margin: 0 10px;
-  font-size: 24px;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.social-icons i:hover {
-  color: #e3e1e8;
-}
-
-.additional-info {
-  margin-top: 15px;
-}
