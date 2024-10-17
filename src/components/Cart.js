@@ -1,4 +1,5 @@
 import React from "react";
+import CartItem from "./CartItem";
 
 const Cart = ({ cartItems = [], onRemoveItem, onUpdateQuantity }) => {
   const totalPrice =
@@ -14,30 +15,16 @@ const Cart = ({ cartItems = [], onRemoveItem, onUpdateQuantity }) => {
         <ul>
           {cartItems.map((item) => (
             <li key={item.id} style={{ marginBottom: "10px" }}>
-              <span>{item.name}</span> - R{item.price.toFixed(2)} x{" "}
-              {item.quantity}
-              <button
-                onClick={() => onRemoveItem(item.id)}
-                style={{ marginLeft: "10px" }}
-              >
-                Remove
-              </button>
-              <div style={{ display: "inline-block", marginLeft: "10px" }}>
-                <button
-                  onClick={() =>
-                    onUpdateQuantity(item.id, Math.max(item.quantity - 1, 0))
-                  }
-                  disabled={item.quantity <= 1}
-                >
-                  -
-                </button>
-                <span style={{ margin: "0 5px" }}>{item.quantity}</span>
-                <button
-                  onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
-                >
-                  +
-                </button>
-              </div>
+              <CartItem
+                name={item.name}
+                price={item.price}
+                quantity={item.quantity}
+                image={item.image}
+                removeFromCart={() => onRemoveItem(item.id)}
+                updateQuantity={(newQuantity) =>
+                  onUpdateQuantity(item.id, newQuantity)
+                }
+              />
             </li>
           ))}
         </ul>
