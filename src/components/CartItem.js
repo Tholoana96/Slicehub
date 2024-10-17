@@ -11,7 +11,7 @@ const CartItem = ({
       <img src={image} alt={name} className="cart-item-image" />
       <div className="cart-item-details">
         <h4 className="item-name">{name}</h4>
-        <p>Price: R{price.toFixed(2)}</p>
+        <p className="price">Price: R{price.toFixed(2)}</p>
         <div className="quantity-actions">
           <div className="cart-item-actions">
             <button

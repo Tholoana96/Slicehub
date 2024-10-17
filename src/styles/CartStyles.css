@@ -46,10 +46,15 @@ body {
   margin: 0;
 }
 
+.price {
+  margin: 0;
+  font-size: 1.1em;
+}
+
 .quantity-actions {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .cart-item-actions {
@@ -68,7 +73,7 @@ body {
 }
 
 .remove-button {
-  background-color: red;
+  background-color: #b50006;
   color: white;
   border: none;
   padding: 5px 10px;
