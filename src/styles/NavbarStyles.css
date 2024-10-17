@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: transparent;
+  background-color: #282828;
   flex-wrap: wrap;
 }
 
@@ -40,11 +40,11 @@
   transform: translateY(-50%);
   width: 1px;
   height: 60%;
-  background-color: #68252e;
+  background-color: #b50006;
 }
 
 .navbar a {
-  color: #2a1a3d;
+  color: white;
   text-decoration: none;
   font-size: 1.4rem;
   padding: 10px 15px;
@@ -54,7 +54,7 @@
 
 .navbar a:hover {
   color: #e3e1e8;
-  background-color: #68252e;
+  background-color: #b50006;
   border: 2px solid transparent;
 }
 

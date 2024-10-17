@@ -1,7 +1,7 @@
 .homepage {
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(to bottom, #f9f9f9, #eaeaea);
+
   font-family: "Arial", sans-serif;
 }
 
@@ -32,7 +32,7 @@
 
 h1 {
   font-size: 2.8rem;
-  color: #721b27;
+  color: #b50006;
   font-weight: bold;
 }
 
@@ -70,7 +70,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  color: #721b27;
+  color: #b50006;
   margin-bottom: 15px;
 }
 
@@ -92,7 +92,7 @@ blockquote {
   padding: 10px 20px;
   font-size: 1.2rem;
   color: white;
-  background-color: #721b27;
+  background-color: #b50006;
   border: none;
   border-radius: 25px;
   cursor: pointer;
