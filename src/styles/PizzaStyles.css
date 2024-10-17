@@ -14,16 +14,21 @@
 .pizza-footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin-top: auto;
 }
 
 img {
   width: 100%;
-  height: 100px;
+  height: 150px;
   border-radius: 8px;
   object-fit: cover;
   margin-bottom: 10px;
+}
+
+.pizza-content {
+  flex-grow: 1;
 }
 
 @media (max-width: 900px) {
@@ -80,4 +85,11 @@ button {
 
 .pizza-item button:hover {
   background-color: #686868;
+}
+
+.pizza-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
 }
