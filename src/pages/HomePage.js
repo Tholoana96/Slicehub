@@ -53,7 +53,9 @@ const HomePage = () => {
           <h1>Welcome to SliceHub</h1>
         </div>
         <p className="tagline">
-          Your favorite pizzas delivered fresh to your door!
+          The <span style={{ color: "#b50006" }}>Best </span> in town straight
+          to your
+          <span style={{ color: "#b50006" }}> door</span>
         </p>
         <br />
         <Link to="/menu">

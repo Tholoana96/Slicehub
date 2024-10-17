@@ -7,6 +7,7 @@ import CheckoutPage from "./pages/CheckoutPage";
 import OrderTrackingPage from "./pages/OrderTrackingPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import "./App.css";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/NavbarStyles.css";
-import logowhite from "../images/logo/SliceHubWhite.png";
+import logowhite from "../images/logo/SliceHub2.png";
 
 const Navbar = ({ cartItemsCount }) => {
   return (
