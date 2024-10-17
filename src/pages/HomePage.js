@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Player } from "@lottiefiles/react-lottie-player";
+import locationPinAnimation from "../animations/location.json";
 import "../styles/HomeStyles.css";
 import logo from "../images/logo/SliceHub.png";
-import playImage from "../images/play-store.png";
 import pizzaImage1 from "../images/pizzas/margherita.jpg";
 import pizzaImage2 from "../images/pizzas/pepperoni.jpg";
 import pizzaImage3 from "../images/pizzas/bbq_chicken.jpg";
@@ -50,12 +51,12 @@ const HomePage = () => {
       <header className="homepage-header">
         <div className="header-content">
           <img src={logo} alt="SliceHub Logo" className="logo" />
-          <h1>Welcome to SliceHub</h1>
         </div>
         <p className="tagline">
-          The <span style={{ color: "#b50006" }}>Best </span> in town straight
-          to your
-          <span style={{ color: "#b50006" }}> door</span>
+          The{" "}
+          <span style={{ fontweight: "bolder", color: "#b50006" }}>Best </span>{" "}
+          in town straight to your
+          <span style={{ fontweight: "bolder", color: "#b50006" }}> door</span>
         </p>
         <br />
         <Link to="/menu">
@@ -83,26 +84,47 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="testimonials">
-        <h2>What Our Customers Say</h2>
-        <blockquote>
-          "SliceHub always delivers the best pizzas! Highly recommend!" - Alex
-        </blockquote>
-        <blockquote>
-          "Fast service and delicious flavors. My favorite pizza place!" - Jamie
-        </blockquote>
+      <section className="location-section">
+        <div className="location-content">
+          <div className="location-pin">
+            <Player
+              autoplay
+              loop
+              src={locationPinAnimation}
+              style={{ height: "300px", width: "300px" }}
+            />
+          </div>
+          <div className="location-text">
+            <h2>Find Us Here</h2>
+            <p>123 Pizza Lane, Flavor Town, South Africa</p>
+            <hr />
+            <p>Monday to Saturday, 9 AM - 10 PM</p>
+            <hr />
+            <p>Email: info@slicehub.co.za</p>
+            <hr />
+            <p>Phone: 011-889-9909</p>
+          </div>
+        </div>
       </section>
 
-      <Link to="/menu">
-        <button className="order-button">Order Now</button>
-      </Link>
-      <br />
-      <br />
-      <br />
-      <p>Get our app on your mobile today!</p>
-      <div className="bottom-image">
-        <br />
-        <img src={playImage} alt="Back to Top" />
+      <div className="app-download-section">
+        <h2>Download the SliceHub Mobile App - Coming Soon!</h2>
+        <div className="download-buttons">
+          <div className="download-button">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Get it on Google Play"
+              className="download-badge"
+            />
+          </div>
+          <div className="download-button">
+            <img
+              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+              alt="Download on the App Store"
+              className="download-badge app-store-badge"
+            />
+          </div>
+        </div>
       </div>
 
       <BackToTopButton />
