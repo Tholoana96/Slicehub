@@ -46,6 +46,10 @@ const HomePage = () => {
     );
   };
 
+  const selectSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <div className="homepage">
       <header className="homepage-header">
@@ -54,9 +58,9 @@ const HomePage = () => {
         </div>
         <p className="tagline">
           The{" "}
-          <span style={{ fontweight: "bolder", color: "#b50006" }}>best </span>{" "}
+          <span style={{ fontWeight: "bolder", color: "#b50006" }}>best </span>{" "}
           slice straight to your
-          <span style={{ fontweight: "bolder", color: "#b50006" }}> door</span>
+          <span style={{ fontWeight: "bolder", color: "#b50006" }}> door</span>
         </p>
         <br />
         <Link to="/menu">
@@ -81,6 +85,16 @@ const HomePage = () => {
           <button className="next" onClick={nextSlide}>
             ❯
           </button>
+        </div>
+
+        <div className="slider-dots">
+          {pizzas.map((_, index) => (
+            <span
+              key={index}
+              className={`dot ${currentIndex === index ? "active" : ""}`}
+              onClick={() => selectSlide(index)}
+            />
+          ))}
         </div>
       </section>
 
