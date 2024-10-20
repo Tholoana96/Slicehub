@@ -13,11 +13,15 @@
 
 .pizza-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   margin-top: auto;
   min-height: 50px;
+}
+
+.pizza-footer button {
+  margin-left: 35px;
 }
 
 img {
@@ -72,6 +76,7 @@ h3 {
 .price {
   font-size: 1rem;
   margin-right: 10px;
+  margin-bottom: 0;
   flex-shrink: 0;
 }
 
