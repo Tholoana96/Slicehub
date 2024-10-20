@@ -10,6 +10,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 60px 20px;
   color: white;
   text-align: left;
@@ -239,7 +240,7 @@ h2 {
   border: none;
   font-size: 24px;
   z-index: 10;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 

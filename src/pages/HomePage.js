@@ -54,8 +54,8 @@ const HomePage = () => {
         </div>
         <p className="tagline">
           The{" "}
-          <span style={{ fontweight: "bolder", color: "#b50006" }}>Best </span>{" "}
-          in town straight to your
+          <span style={{ fontweight: "bolder", color: "#b50006" }}>best </span>{" "}
+          slice straight to your
           <span style={{ fontweight: "bolder", color: "#b50006" }}> door</span>
         </p>
         <br />
