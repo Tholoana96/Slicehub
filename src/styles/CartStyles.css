@@ -84,3 +84,12 @@ body {
 .remove-button:hover {
   background-color: darkred;
 }
+
+.back-to-menu {
+  color: white;
+  text-decoration: none;
+}
+
+.back-to-menu:hover {
+  text-decoration: underline;
+}

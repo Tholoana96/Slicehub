@@ -34,7 +34,9 @@ const CartPage = ({ cartItems, setCartItems }) => {
       <br />
       <br />
       <br />
-      <Link to="/menu">Back to Menu</Link>
+      <Link to="/menu" className="back-to-menu">
+        Back to Menu
+      </Link>
     </div>
   );
 };
