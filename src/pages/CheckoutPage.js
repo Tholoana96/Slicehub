@@ -40,7 +40,9 @@ const CheckoutPage = () => {
 
   return (
     <div className="checkout">
-      <h1>Checkout</h1>
+      <span className="centered-heading">
+        <h1>Checkout</h1>
+      </span>
       <ProgressBar progress={progress} currentStep={currentStep} />
       {loading && <p>Loading...</p>}
       {error && <p className="error">{error}</p>}
