@@ -2,40 +2,59 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/CheckoutStyles.css";
 import ProgressBar from "./ProgressBar";
+import Login from "../components/Login";
+import Register from "../components/Register";
+import ConfirmationModal from "../components/ConfirmationModal";
+import CartItem from "../components/CartItem";
 
 const CheckoutPage = () => {
-  const [name, setName] = useState("");
-  const [address, setAddress] = useState("");
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [progress, setProgress] = useState(33);
+  const [progress, setProgress] = useState(0);
   const [currentStep, setCurrentStep] = useState(0);
-
+  const [userInfo, setUserInfo] = useState({});
+  const [cartItems] = useState([]);
+  const [showLogin, setShowLogin] = useState(false);
+  const [showRegister, setShowRegister] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [orderSummary, setOrderSummary] = useState([]);
+  const [showUserDetails, setShowUserDetails] = useState(false);
+  const [showPlaceOrderButton, setShowPlaceOrderButton] = useState(false);
   const navigate = useNavigate();
 
-  const handleCheckout = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError("");
-
-    if (currentStep === 2) {
-      setTimeout(() => {
-        if (!name || !address || !email) {
-          setError("Please fill in all fields correctly.");
-          setLoading(false);
-        } else {
-          alert(`Order confirmed for ${name}!`);
-          setProgress(100);
-          navigate("/order-tracking");
-        }
-      }, 2000);
-    }
+  const handleLoginSuccess = (userDetails) => {
+    setUserInfo(userDetails);
+    setShowLogin(false);
+    setCurrentStep(1);
+    setProgress(50);
+    setShowUserDetails(true);
+    setShowPlaceOrderButton(true);
   };
 
-  const isValidEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+  const handleRegisterSuccess = (info) => {
+    setUserInfo(info);
+    setShowRegister(false);
+    setCurrentStep(1);
+    setProgress(50);
+    setShowUserDetails(true);
+    setShowPlaceOrderButton(true);
+  };
+
+  const handleConfirmOrder = () => {
+    setOrderSummary(cartItems);
+    setShowModal(true);
+    setProgress(99);
+    setShowUserDetails(false);
+    setShowPlaceOrderButton(false);
+  };
+
+  const handleOrderConfirmation = () => {
+    alert(`Order placed for ${userInfo.name}!`);
+    setProgress(100);
+    navigate("/order-tracking");
+  };
+
+  const redirectToRegister = () => {
+    setShowLogin(false);
+    setShowRegister(true);
   };
 
   return (
@@ -44,78 +63,61 @@ const CheckoutPage = () => {
         <h1>Checkout</h1>
       </span>
       <ProgressBar progress={progress} currentStep={currentStep} />
-      {loading && <p>Loading...</p>}
-      {error && <p className="error">{error}</p>}
-      <form onSubmit={handleCheckout} className="CheckoutForm">
-        {currentStep === 0 && (
-          <div>
-            <label>Name:</label>
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-            <button
-              type="button"
-              onClick={() => {
-                if (name) {
-                  setCurrentStep(1);
-                  setProgress(66);
-                }
-              }}
-            >
-              Next
-            </button>
-          </div>
-        )}
-
-        {currentStep === 1 && (
-          <>
-            <div>
-              <label>Email:</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              {email && !isValidEmail(email) && (
-                <p className="error">Please enter a valid email address.</p>
-              )}
-            </div>
-            <div>
-              <label>Address:</label>
-              <input
-                type="text"
-                className="address"
-                value={address}
-                onChange={(e) => setAddress(e.target.value)}
-                required
-              />
-            </div>
-            <button
-              type="button"
-              onClick={() => {
-                if (email && address && isValidEmail(email)) {
-                  setCurrentStep(2);
-                  setProgress(100);
-                } else {
-                  setError("Please enter a valid email and address.");
-                }
-              }}
-            >
-              Next
-            </button>
-          </>
-        )}
-
-        {currentStep === 2 && (
-          <button type="submit" disabled={loading}>
-            Place Order
+      {showModal && (
+        <ConfirmationModal
+          onConfirm={handleOrderConfirmation}
+          orderItems={cartItems}
+        />
+      )}
+      {showLogin ? (
+        <Login
+          onLoginSuccess={handleLoginSuccess}
+          onRegisterRedirect={redirectToRegister}
+        />
+      ) : showRegister ? (
+        <Register
+          onRegisterSuccess={handleRegisterSuccess}
+          onLoginRedirect={() => {
+            setShowRegister(false);
+            setShowLogin(true);
+          }}
+        />
+      ) : currentStep === 0 ? (
+        <div>
+          <button type="button" onClick={() => setShowLogin(true)}>
+            Login
           </button>
-        )}
-      </form>
+          <button type="button" onClick={() => setShowRegister(true)}>
+            Register
+          </button>
+        </div>
+      ) : (
+        <div>
+          {showUserDetails && (
+            <div>
+              <h2>User Details</h2>
+              <p>Name: {userInfo.name}</p>
+              <p>Address: {userInfo.address}</p>
+              <p>Cellphone Number: {userInfo.cellphone}</p>
+              <p>Email Address: {userInfo.email}</p>
+            </div>
+          )}
+          {showPlaceOrderButton && (
+            <button type="button" onClick={handleConfirmOrder}>
+              Place Order
+            </button>
+          )}
+          {orderSummary.length > 0 && (
+            <div>
+              <h2>Order Summary</h2>
+              <h3>Cart Items:</h3>
+              {orderSummary.map((item) => (
+                <CartItem key={item.id} {...item} />
+              ))}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 };

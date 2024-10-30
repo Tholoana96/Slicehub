@@ -1,7 +1,7 @@
 const ProgressBar = ({ progress, currentStep }) => {
   const steps = [
-    "Enter Your Name",
-    "Enter Your Contact Details",
+    "Login / Register",
+    "Lick Your Lips, Almost done!",
     "Proceed to complete order",
   ];
 

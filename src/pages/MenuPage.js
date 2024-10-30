@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { fetchPizzas } from "../api/mockApi";
+import { fetchPizzas } from "../api";
 import PizzaList from "../components/PizzaList";
 import { useNavigate } from "react-router-dom";
 import BackToTopButton from "../components/BackToTopButton";
