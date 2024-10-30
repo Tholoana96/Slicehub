@@ -7,35 +7,42 @@ import CheckoutPage from "./pages/CheckoutPage";
 import OrderTrackingPage from "./pages/OrderTrackingPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Login from "./components/Login";
+import PizzaList from "./components/PizzaList";
+import { AuthProvider } from "./context/AuthContext";
 import "./App.css";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
   return (
-    <Router>
-      <div>
-        <Navbar cartItemsCount={cartItems.length} />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route
-            path="/menu"
-            element={
-              <MenuPage cartItems={cartItems} setCartItems={setCartItems} />
-            }
-          />
-          <Route
-            path="/cart"
-            element={
-              <CartPage cartItems={cartItems} setCartItems={setCartItems} />
-            }
-          />
-          <Route path="/checkout" element={<CheckoutPage />} />
-          <Route path="/order-tracking" element={<OrderTrackingPage />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <div>
+          <Navbar cartItemsCount={cartItems.length} />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route
+              path="/menu"
+              element={
+                <MenuPage cartItems={cartItems} setCartItems={setCartItems} />
+              }
+            />
+            <Route
+              path="/cart"
+              element={
+                <CartPage cartItems={cartItems} setCartItems={setCartItems} />
+              }
+            />
+            <Route path="/checkout" element={<CheckoutPage />} />
+            <Route path="/order-tracking" element={<OrderTrackingPage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/pizzas" element={<PizzaList />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </AuthProvider>
   );
 }
 
