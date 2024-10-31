@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://slicehub-1.onrender.com/api";
 
 export const registerUser = async (userData) => {
   const response = await fetch(`${BASE_URL}/users/register`, {
