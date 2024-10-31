@@ -25,6 +25,10 @@ app.use("/api/users", require("./routes/users"));
 app.use("/api/pizzas", require("./routes/pizzas"));
 app.use("/api/orders", require("./routes/orders"));
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the SliceHub API");
+});
+
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
 });
