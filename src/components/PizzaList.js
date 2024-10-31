@@ -52,10 +52,7 @@ const PizzaList = ({ onSelectPizza, cartItems = [] }) => {
             <div key={pizza.id} className="pizza-item">
               <h3>{pizza.name}</h3>
               <br />
-              <img
-                src={`https://slicehub-1.onrender.com/images/pizzas/${pizza.image}`}
-                alt={pizza.name}
-              />
+              <img src={pizza.image} alt={pizza.name} />
               <p>{pizza.description}</p>
               <br />
               <div className="pizza-footer">
