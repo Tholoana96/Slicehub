@@ -52,7 +52,7 @@ const PizzaList = ({ onSelectPizza, cartItems = [] }) => {
             <div key={pizza.id} className="pizza-item">
               <h3>{pizza.name}</h3>
               <br />
-              <img src={pizza.image} alt={pizza.name} />
+              <img src={`./images/pizzas/${pizza.image}`} alt={pizza.name} />
               <p>{pizza.description}</p>
               <br />
               <div className="pizza-footer">
