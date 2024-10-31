@@ -10,7 +10,7 @@ const CartItem = ({
     <div className="cart-item-wrapper">
       <div className="cart-item-content">
         <img
-          src={`http://localhost:5000${image}`}
+          src={`https://slicehub-1.onrender.com/images/${image}`}
           alt={name}
           className="cart-item-image"
         />

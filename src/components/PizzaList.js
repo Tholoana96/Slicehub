@@ -53,7 +53,7 @@ const PizzaList = ({ onSelectPizza, cartItems = [] }) => {
               <h3>{pizza.name}</h3>
               <br />
               <img
-                src={`http://localhost:5000${pizza.image}`}
+                src={`https://slicehub-1.onrender.com/images/${pizza.image}`}
                 alt={pizza.name}
               />
               <p>{pizza.description}</p>
