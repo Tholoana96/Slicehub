@@ -12,7 +12,7 @@ app.use(
 );
 app.use(express.json());
 app.use(
-  "/images",
+  "/images/pizzas",
   express.static(path.join(__dirname, "../src/images/pizzas"))
 );
 
