@@ -23,7 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # Ignore specific files
-/public
 ./src/App.test.js
 ./src/index.css
 /App.css
@@ -31,3 +30,5 @@ yarn-error.log*
 /logo.svg
 /reportWebVitals.js
 /setupTests.js
+./src/api.js
+./backend

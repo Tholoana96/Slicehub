@@ -9,11 +9,7 @@ const CartItem = ({
   <div className="cart-item">
     <div className="cart-item-wrapper">
       <div className="cart-item-content">
-        <img
-          src={`./images/pizzas/${image}`}
-          alt={name}
-          className="cart-item-image"
-        />
+        <img src={image} alt={name} className="cart-item-image" />
         <div className="cart-item-details">
           <h4 className="item-name">{name}</h4>
           <p className="price">Price: R{price.toFixed(2)}</p>

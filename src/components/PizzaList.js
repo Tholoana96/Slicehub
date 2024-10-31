@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchPizzas } from "../api";
+import { fetchPizzas } from "../api/mockApi";
 import "../styles/PizzaStyles.css";
 
 const PizzaList = ({ onSelectPizza, cartItems = [] }) => {
@@ -52,7 +52,7 @@ const PizzaList = ({ onSelectPizza, cartItems = [] }) => {
             <div key={pizza.id} className="pizza-item">
               <h3>{pizza.name}</h3>
               <br />
-              <img src={`./images/pizzas/${pizza.image}`} alt={pizza.name} />
+              <img src={pizza.image} alt={pizza.name} />
               <p>{pizza.description}</p>
               <br />
               <div className="pizza-footer">
